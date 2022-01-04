@@ -20,11 +20,11 @@
   "postCreateCommand": "npm install --prefix /workspaces/slidia/backend/",
 
   "remoteUser": "node",
-  "features": {
-    "git": "os-provided",
-    "github-cli": "latest",
-    "sshd": "latest"
-  },
+ // "features": {
+ //   "git": "os-provided",
+ //   "github-cli": "latest",
+ //   "sshd": "latest"
+ // },
 
   "portsAttributes": {
     "5000": { "label": "slidia/backend" },
