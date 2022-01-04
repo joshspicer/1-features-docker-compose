@@ -1,0 +1,33 @@
+{
+  "name": "Slidia Backend: Njs + Mongo",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+
+  "settings": {},
+
+  // VS-Code extensions to install
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "mongodb.mongodb-vscode",
+    "humao.rest-client"
+  ],
+
+  // These ports will be forwarded from the Codespace to the local machine
+  "forwardPorts": [5000, 27017],
+
+  // This will be executed after codespace creation
+  "postCreateCommand": "npm install --prefix /workspaces/slidia/backend/",
+
+  "remoteUser": "node",
+  "features": {
+    "git": "os-provided",
+    "github-cli": "latest",
+    "sshd": "latest"
+  },
+
+  "portsAttributes": {
+    "5000": { "label": "slidia/backend" },
+    "27017": { "label": "MongoDB" }
+  }
+}
